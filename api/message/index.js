@@ -1,6 +1,6 @@
 const connectionString = process.env.DATABASE_CONNECTION_STRING;
 
-const users = connectionString.connect(function(err){
+connectionString.connect(function(err){
         if (err) throw err;
       
         connectionString.query("SELECT * FROM USERS", function(err,result){
