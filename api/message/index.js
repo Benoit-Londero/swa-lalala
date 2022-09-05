@@ -1,13 +1,6 @@
 const connectionString = process.env.DATABASE_CONNECTION_STRING;
 
-connectionString.connect(function(err){
-        if (err) throw err;
-      
-        connectionString.query("SELECT * FROM USERS", function(err,result){
-            if (err) throw err;
-            console.log(result);
-        });
-    });
+console.log(connectionString);
     
 module.exports = async function (context, req) {
     context.res.json({
