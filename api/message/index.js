@@ -1,8 +1,6 @@
 const connectionString = process.env.DATABASE_CONNECTION_STRING;
 
-module.exports = async function (context, req) {
-
-    const users = connectionString.connect(function(err){
+const users = connectionString.connect(function(err){
         if (err) throw err;
       
         connectionString.query("SELECT * FROM USERS", function(err,result){
@@ -10,6 +8,8 @@ module.exports = async function (context, req) {
             console.log(result);
         });
     });
+
+module.exports = async function (context, req) {
 
     context.res.json({
         text: "Hello from the API"
