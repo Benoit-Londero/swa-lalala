@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'Lato';
+    text-align: left;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400!important;
+    color: #444;
+}
